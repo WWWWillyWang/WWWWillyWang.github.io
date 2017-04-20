@@ -1,0 +1,14 @@
+div.dino
+{
+	background-image: url("dinosuar_background.jpg");
+	padding-top: 50px;
+	padding-right: 30px;
+    padding-bottom: 300px;
+    padding-left: 80px;
+}
+
+img
+{
+	position: relative;
+	top: 193.5px;
+}
