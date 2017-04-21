@@ -6,15 +6,6 @@ div.dino
     padding-left: 30px;
 }
 
-
-#bird
-{
-	position: relative;
-	top: 100px;
-	left: 30px;
-	z-index: 1;
-}
-
 #background
 {
 	width: 75%;
@@ -23,11 +14,27 @@ div.dino
 	z-index: 0;
 }
 
+#bird
+{
+	position: absolute;
+	top: 120px;
+	left: 50px;
+	z-index: 1;
+}
+
 #bird2
 {
-	position: relative;
-	top: 100px;
-	right: -850px;
+	position: absolute;
+	top: 240px;
+	left: 1000px;
+	z-index: 1;
+}
+
+#bird3
+{
+	position: absolute;
+	top: 120px;
+	left: 1000px;
 	z-index: 1;
 }
 
