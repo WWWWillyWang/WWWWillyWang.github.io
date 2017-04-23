@@ -53,9 +53,9 @@ function bird2_update()
 {
 	var bird2 = document.getElementById("bird2");
 
-    position = position - 50;
+    position = position - 100;
 
-    if(position<=0)
+    if(position<0)
     {
     	position=1000;
     	var height = Math.random()*90+1;
@@ -86,9 +86,8 @@ function bird3_update()
 	var bird2 = document.getElementById("bird2");
 	var bird3 = document.getElementById("bird3");
 
-    position = position - 50;
 
-    if(position<=0)
+    if(position<0)
     {
     	position=1000;
     	var height = Math.random()*90+1;
@@ -144,23 +143,35 @@ function gameover()
 	var bird2=document.getElementById("bird2");
 	var bird3=document.getElementById("bird3");
 
-	if((bird.style.top==bird2.style.top)&&((bird2.style.left<="150px")&&(bird2.style.left>="0px")))
+	if((bird.style.top==bird2.style.top))
 	{
-		score=0;
-		document.getElementById("score").innerHTML = score;
-		alert("Gameover");
-		bird2.style.left="1000px";
-		bird3.style.left="1000px";
-		position=1000;
+		if(bird2.style.left<="100px")
+		{
+			if(bird2.style.left>"0px")
+			{
+				score=0;
+				document.getElementById("score").innerHTML = score;
+				alert("Gameover");
+				bird2.style.left="1000px";
+				bird3.style.left="1000px";
+				position=1000;
+			}
+		}
 	}
-	else if((bird.style.top==bird3.style.top)&&((bird3.style.left<="150px")&&(bird3.style.left>="0px")))
+	else 
 	{
-		score=0;
-		document.getElementById("score").innerHTML = score;
-		alert("Gameover");
-		bird2.style.left="1000px";
-		bird3.style.left="1000px";
-		position=1000;
+		if(bird3.style.left<="100px")
+		{
+			if(bird3.style.left>"0px")
+			{
+				score=0;
+				document.getElementById("score").innerHTML = score;
+				alert("Gameover");
+				bird2.style.left="1000px";
+				bird3.style.left="1000px";
+				position=1000;
+			}
+		}
 	}
 }
 
